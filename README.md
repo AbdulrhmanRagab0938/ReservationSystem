@@ -35,6 +35,7 @@ A custom WordPress plugin designed to help restaurants and dining businesses man
 
 ```bash
 git clone https://github.com/yourusername/reservation-system-plugin.git
+```bash
 
 2. Upload the plugin folder to:
 /wp-content/plugins/
