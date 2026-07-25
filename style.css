@@ -1,0 +1,133 @@
+/* Form container */
+.rr-form {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: transparent;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Inputs, Select, Textarea */
+.rr-form input,
+.rr-form select,
+.rr-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: transparent;
+    border-radius: 4px;
+    color: #E5E5E5;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+/* Placeholder styling */
+.rr-form input::placeholder,
+.rr-form textarea::placeholder {
+    color: #A0A0A0;
+    opacity: 1;
+}
+
+/* Focus state */
+.rr-form input:focus,
+.rr-form select:focus,
+.rr-form textarea:focus {
+    border-color: #E0C48F;
+    box-shadow: 0 0 0 1px rgba(200, 169, 106, 0.3);
+}
+
+/* Select dropdown arrow styling */
+.rr-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: 
+        linear-gradient(45deg, transparent 50%, #C8A96A 50%), 
+        linear-gradient(135deg, #C8A96A 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(50% - 3px),
+                         calc(100% - 12px) calc(50% - 3px);
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+}
+
+/* Date input dark mode */
+.rr-form input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Button */
+.rr-form button {
+    background: transparent;
+    border: 1px solid #C8A96A;
+    color: #E5E5E5;
+    padding: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover */
+.rr-form button:hover {
+    background: #C8A96A;
+    color: #000;
+}
+
+/* Success & Error messages */
+.rr-success {
+    color: #C8A96A;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.rr-error {
+    color: #d96c6c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .rr-form { max-width: 100%; }
+}
+
+/* Time dropdown matches form styling */
+.rr-form select {
+    color: #E5E5E5 !important;
+    background-color: transparent !important;
+}
+
+/* Dropdown options */
+.rr-form select option {
+    color: #E5E5E5;
+    background-color: #1A1A1A;
+}
+
+/* Row container */
+.rr-form .rr-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Make inputs/select in row share space */
+.rr-form .rr-row input,
+.rr-form .rr-row select {
+    flex: 1 1 48%;
+    min-width: 120px;
+}
+
+/* Mobile: stack fields */
+@media (max-width: 600px) {
+    form.rr-form .rr-row input,
+    form.rr-form .rr-row select {
+        flex: 1 1 100% !important;
+    }
+}
